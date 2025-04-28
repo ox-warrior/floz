@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-resources:
-- allow-webhook-traffic.yaml
-- allow-metrics-traffic.yaml
+# This configuration is for teaching kustomize how to update name ref substitution
+nameReference:
+- kind: Issuer
+  group: cert-manager.io
+  fieldSpecs:
+  - kind: Certificate
+    group: cert-manager.io
+    path: spec/issuerRef/name
