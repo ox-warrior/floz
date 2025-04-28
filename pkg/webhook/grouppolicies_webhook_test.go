@@ -20,7 +20,7 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 
-	floziov1 "github.com/ox-warrior/floz/api/v1"
+	floziov1 "github.com/ox-warrior/floz/pkg/apis/v1"
 	// TODO (user): Add any additional imports if needed
 )
 

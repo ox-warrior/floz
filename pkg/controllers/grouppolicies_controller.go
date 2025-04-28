@@ -24,7 +24,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	logf "sigs.k8s.io/controller-runtime/pkg/log"
 
-	floziov1 "github.com/ox-warrior/floz/api/v1"
+	floziov1 "github.com/ox-warrior/floz/pkg/apis/v1"
 )
 
 // GroupPoliciesReconciler reconciles a GroupPolicies object

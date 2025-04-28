@@ -27,7 +27,7 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	floziov1 "github.com/ox-warrior/floz/api/v1"
+	floziov1 "github.com/ox-warrior/floz/pkg/apis/v1"
 )
 
 var _ = Describe("GroupPolicies Controller", func() {

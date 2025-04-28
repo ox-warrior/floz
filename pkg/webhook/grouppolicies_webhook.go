@@ -26,7 +26,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 	"sigs.k8s.io/controller-runtime/pkg/webhook/admission"
 
-	floziov1 "github.com/ox-warrior/floz/api/v1"
+	floziov1 "github.com/ox-warrior/floz/pkg/apis/v1"
 )
 
 // nolint:unused

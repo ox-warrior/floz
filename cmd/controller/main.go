@@ -37,9 +37,9 @@ import (
 	metricsserver "sigs.k8s.io/controller-runtime/pkg/metrics/server"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	floziov1 "github.com/ox-warrior/floz/api/v1"
-	"github.com/ox-warrior/floz/internal/controller"
-	webhookfloziov1 "github.com/ox-warrior/floz/internal/webhook/v1"
+	floziov1 "github.com/ox-warrior/floz/pkg/apis/v1"
+	controller "github.com/ox-warrior/floz/pkg/controllers"
+	grouppolicywebhook "github.com/ox-warrior/floz/pkg/webhook"
 	// +kubebuilder:scaffold:imports
 )
 
@@ -212,7 +212,7 @@ func main() {
 	}
 	// nolint:goconst
 	if os.Getenv("ENABLE_WEBHOOKS") != "false" {
-		if err = webhookfloziov1.SetupGroupPoliciesWebhookWithManager(mgr); err != nil {
+		if err = grouppolicywebhook.SetupGroupPoliciesWebhookWithManager(mgr); err != nil {
 			setupLog.Error(err, "unable to create webhook", "webhook", "GroupPolicies")
 			os.Exit(1)
 		}
