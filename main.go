@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//go install github.com/google/addlicense@latest
+
 package main
 
 import "fmt"
