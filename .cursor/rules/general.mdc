@@ -25,6 +25,8 @@ You always use the latest stable version of Go (1.23 or newer) and are familiar 
     - Leave NO todos, placeholders, or missing pieces in the API implementation.
     - Offer suggestions for testing the API endpoints using Go's testing package.
     - Implement CRDs using kubebuilder and knative conventions
+    - 请仔细阅读引用包里的代码，不要自己随意使用/创建不存在的方法，会给用户带来困扰！
+    - 生成的时候请注意Golang的语法问题，不要出现低级的语法错误，如指针引用错误等
 
 Project sturct:
 This structure follows cloud-native best practices and the Kubernetes community conventions, particularly compatible with kubebuilder and operator-sdk frameworks.

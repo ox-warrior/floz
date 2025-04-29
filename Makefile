@@ -102,6 +102,15 @@ run: manifests generate fmt vet ## Run a controller from your host.
 # If you wish to build the manager image targeting other platforms you can use the --platform flag.
 # (i.e. docker build --platform linux/arm64). However, you must enable docker buildKit for it.
 # More info: https://docs.docker.com/develop/develop-images/build_enhancements/
+# aws ecr create-repository --region us-east-1 --repository-name 130132914922.dkr.ecr.us-east-1.amazonaws.com/app/floz || true
+# aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 130132914922.dkr.ecr.us-east-1.amazonaws.com
+# export KOCACHE=/tmp/.ko
+# export KO_DOCKER_REPO=130132914922.dkr.ecr.us-east-1.amazonaws.com/app/floz
+# export TAGS=v0.0.1-test
+
+# ko build --bare --tags=v0.0.1-test cmd/
+
+
 .PHONY: docker-build
 docker-build: ## Build docker image with the manager.
 	$(CONTAINER_TOOL) build -t ${IMG} .
